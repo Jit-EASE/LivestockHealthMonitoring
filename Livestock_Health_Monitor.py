@@ -171,13 +171,13 @@ with g5: st.plotly_chart(create_gauge("Pest Risk (%)", pest, 0, 100, "green"))
 with g6: st.plotly_chart(create_gauge("Germ Load (%)", germ, 0, 100, "brown"))
 
 # AI Button
-if st.button("Generate AI & Econometric Predictions"):
+if st.button("Generate Predictions"):
     # Create equal width responsive columns
     col1, col2 = st.columns([1, 1], gap="large")
 
     # ----------- LEFT COLUMN: Agentic AI Diagnosis -----------
     with col1:
-        st.subheader("Agentic AI and Econometric Diagnosis")
+        st.subheader("Agentic AI Diagnosis")
         with st.spinner("Generating results..."):
             ai_diagnosis = agentic_ai_predict(species, stress, infection, wound, temp, pest, germ)
 
