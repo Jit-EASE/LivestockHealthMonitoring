@@ -139,7 +139,7 @@ if uploaded_file:
     st.success("File uploaded successfully.")
 
 if not use_uploaded:
-    st.info("Using test dataset (no file uploaded).")
+    st.info("Using sample sensor dataset.")
     df = generate_synthetic_data()
     st.dataframe(df.head(10), height=250)
 else:
